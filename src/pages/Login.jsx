@@ -1,10 +1,23 @@
 import React, { Component } from "react";
-import { Button } from "antd";
 
 export default class Login extends Component {
   render() {
-    return <Button type="link">Link</Button>;
+    return (
+      <form>
+        <div>
+          <label>Username *:</label>
+          <input type="text" />
+        </div>
+        <div>
+          <label>Password *:</label>
+          <input type="text" />
+        </div>
+      </form>
+    );
   }
 }
 
-const styles = {};
+// Styles
+const styles = {
+  
+}
