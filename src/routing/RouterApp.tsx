@@ -13,14 +13,8 @@ export default class RouterApp extends Component {
           <Route exact path="/">
             <Redirect to="/login" />
           </Route>
-        </Switch>
-        <Switch>
           <Route exact path="/register" component={Register} />
-        </Switch>
-        <Switch>
           <Route exact path="/login" component={Login} />
-        </Switch>
-        <Switch>
           <Route exact path="/home" component={Home} />
         </Switch>
       </BrowserRouter>
