@@ -24,7 +24,7 @@ export default class Register extends Component<Props, State> {
     console.log("Register -> handleChange -> event", event)
 
     const target = event.target;
-    const value = target.name === 'isGoing' ? target.checked : target.value;
+    const value = target.value;
     const name = target.name;
 
     const newSate = Object.assign({}, this.state, { [name]: value });
