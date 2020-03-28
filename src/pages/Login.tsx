@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import ILogin from "./../data/models/Login";
 
 interface Props {}
-interface State {
-  username: string;
-  password: string;
-}
 
-export class Login extends Component<Props, State> {
+export class Login extends Component<Props, ILogin> {
   constructor(props: Props) {
     super(props);
     this.state = { username: "", password: "" };
