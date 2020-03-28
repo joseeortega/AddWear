@@ -22,32 +22,41 @@ export class Login extends Component<Props, ILogin> {
 
   render() {
     return (
-      <form>
-        <div>
-          <label>
-            Username *:
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={event => {
-                this.setUsername(event.target.value);
-              }}
-            />
-          </label>
+      <div className="container flex justify-content-center">
+        <div className="m-5 p-5 bg-white border-gray border-radius">
+          <h1 className="m-0 mb-2 p-0">Login</h1>
+          <form>
+            <div className="mb-1">
+              <label>
+                <span>Username *:</span>
+                <input
+                  type="text"
+                  value={this.state.username}
+                  onChange={event => {
+                    this.setUsername(event.target.value);
+                  }}
+                />
+              </label>
+            </div>
+            <div className="mb-2">
+              <label>
+                <span>Password *:</span>
+                <input
+                  type="password"
+                  value={this.state.password}
+                  onChange={event => {
+                    this.setPassword(event.target.value);
+                  }}
+                />
+              </label>
+            </div>
+            <div>
+              <button>Send</button>
+            </div>
+          </form>
+          <p>You do not have an account? Create Account</p>
         </div>
-        <div>
-          <label>
-            Password *:
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={event => {
-                this.setPassword(event.target.value);
-              }}
-            />
-          </label>
-        </div>
-      </form>
+      </div>
     );
   }
 }
